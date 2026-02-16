@@ -1,6 +1,6 @@
 import React from 'react';
 import { FadeIn } from './FadeIn';
-import { Mail, Phone, ArrowUpRight, FileText } from 'lucide-react';
+import { Mail, Phone, ArrowUpRight, FileText, Linkedin } from 'lucide-react';
 
 interface ContactLinkProps {
   href: string;
@@ -14,7 +14,7 @@ const ContactLink: React.FC<ContactLinkProps> = ({ href, label, icon: Icon, subL
   <a 
     href={href} 
     className="group relative flex items-center gap-5 p-4 -mx-4 rounded-xl transition-all duration-300 hover:bg-stone-100"
-    {...(isDownload ? { download: "Aileen_Hernandez_Resume.pdf" } : {})}
+    {...(isDownload ? { download: "Aileen_Hernandez_Resume.pdf" } : { target: "_blank", rel: "noopener noreferrer" })}
   >
     <div className="w-12 h-12 rounded-full bg-white border border-stone-200 flex items-center justify-center group-hover:border-stone-400 transition-colors shadow-sm">
       <Icon size={18} strokeWidth={1} className="text-stone-400 group-hover:text-stone-900 transition-colors" />
@@ -71,8 +71,15 @@ export const Contact: React.FC<ContactProps> = ({ id }) => {
             icon={Phone}
           />
           
-          <ContactLink 
-            href="/resume.pdf" 
+          <ContactLink
+            href="https://linkedin.com/in/aileen-hernandez-200754355"
+            label="Aileen Hernandez"
+            subLabel="LinkedIn"
+            icon={Linkedin}
+          />
+
+          <ContactLink
+            href="/resume.pdf"
             label="Download Resume"
             subLabel="Document"
             icon={FileText}
