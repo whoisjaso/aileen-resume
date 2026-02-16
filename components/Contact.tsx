@@ -14,7 +14,7 @@ const ContactLink: React.FC<ContactLinkProps> = ({ href, label, icon: Icon, subL
   <a 
     href={href} 
     className="group relative flex items-center gap-5 p-4 -mx-4 rounded-xl transition-all duration-300 hover:bg-stone-100"
-    {...(isDownload ? { download: true } : {})}
+    {...(isDownload ? { download: "Aileen_Hernandez_Resume.pdf" } : {})}
   >
     <div className="w-12 h-12 rounded-full bg-white border border-stone-200 flex items-center justify-center group-hover:border-stone-400 transition-colors shadow-sm">
       <Icon size={18} strokeWidth={1} className="text-stone-400 group-hover:text-stone-900 transition-colors" />
@@ -65,7 +65,7 @@ export const Contact: React.FC<ContactProps> = ({ id }) => {
           />
 
           <ContactLink 
-            href="tel:281-713-0222" 
+            href="tel:+12817130222" 
             label="281-713-0222"
             subLabel="Phone"
             icon={Phone}
